@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	background-color: pink;
+	margin:20px;
+}
+
+#head {
+	text-align: center;
+}
+
+#hints{
+color:red;
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>Registration Form</title>
+</head>
+<body>
+	<h1 id="head">
+		<u>Registration Form</u>
+	</h1>
+		<br>	<br>	<br>	<br>
+
+	<form name="RegistrationForm" method="post" action="RegServlet">
+		Firstname <input type="text" name="Firstname" value="Firstname" required>
+		Lastname <input type="text" name="Lastname" value="Lastname" required>
+		<br>
+		<br> Course: <select name="course" required>
+			<option value="course" selected>Course</option>
+			<option value="softwareEngineering">Software Engineering</option>
+			<option value="dataEngineering">Data Engineering</option>
+			<option value="bioinformatics">Bioinformatics</option>
+			<option value="networkSec">Network and Security</option>
+			<option value="multimedia">Graphics and Multimedia</option>
+		</select> <br>
+		<br> Gender:<br> <input type="radio" name="gender" value="male" selected >Male 
+			
+			<input type="radio" name="gender" value="female" required >Female <br>
+			
+		<br> Language:<br>
+		
+		    <input type="checkbox" name="Language" value="english" checked >English <br> 
+			<input type="checkbox" name="Language" value="malay" >Malay <br> 
+			<input type="checkbox" name="Language" value="mardarin" >Mandarin <br>
+		
+		<br>
+		Transportation:<br> 
+		<p id="hints"> <b>Hold down the Ctrl (windows) or Command (Mac) button to select multiple options for transportation.</b></p>
+		<select name="transportation"
+			size="5" required multiple>
+			<option value="bus">Bus</option>
+			<option value="car">Car</option>
+			<option value="motorcycle">Motorcycle</option>
+			<option value="bicycle">Bicycle</option>
+			<option value="walking">Walking</option>
+		</select>
+		
+		<br><br>
+		Phone: <input type="tel" name="phonenumber" required/>
+
+		<br><br>
+		Current Address:<br>
+		  <textarea name="address" rows="4" cols="50" required></textarea>
+		  
+		<br><br>
+		Email:<br>
+		<input type="text" name="email" value="Enter Email" required/>
+		
+		<br><br>
+		
+		<input type="Submit" value="Register"/>
+
+
+
+	</form>
+
+
+
+
+</body>
+</html>
